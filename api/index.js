@@ -9,8 +9,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const PORT = process.env.PORT || 8000;
-
 
 const api_key=process.env.OPENROUTER_API_KEY;
 app.post('/api/chat', async (req, res) => {
@@ -49,4 +47,4 @@ app.post('/api/chat', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+export default app;
