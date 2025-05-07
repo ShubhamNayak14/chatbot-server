@@ -35,7 +35,7 @@ app.post("/api/chat", async (req, res) => {
         }),
       }
     );
-
+    console.log(api_key);
     if (!openRouterRes.ok) {
       const errorData = await openRouterRes.text();
       return res
@@ -55,5 +55,5 @@ app.post("/api/chat", async (req, res) => {
 });
 
 app.listen(PORT, () =>
-  console.log(`Server running on http://localhost:${PORT}`)
+  console.log(`Server running on Port: ${PORT}`)
 );
